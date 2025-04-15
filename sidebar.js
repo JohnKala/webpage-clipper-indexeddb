@@ -24,12 +24,31 @@ async function renderClippedPages() {
     
     if (pages.length === 0) {
       // Show a message if there are no clipped pages
+<<<<<<< HEAD
       clipContainer.innerHTML = `
         <div class="no-clips">
           <p>No pages clipped yet</p>
           <p>Click "Clip Current Page" in the popup to save a webpage</p>
         </div>
       `;
+=======
+      clipItem.innerHTML = `
+      <div class="clip-title">
+        ${page.favicon ? `<img src="${page.favicon}" class="favicon" onerror="this.style.display='none'">` : ''}
+        ${page.title}
+      </div>
+      <a href="${page.url}" class="clip-url" target="_blank">${page.url}</a>
+      <div class="clip-date">${formatDate(page.timestamp)}</div>
+      ${page.wordCount ? `
+      <div class="clip-metadata">
+        <div class="metadata-item">Words: ${page.wordCount}</div>
+        <div class="metadata-item">Reading time: ${page.readingTime} min</div>
+      </div>
+      ` : ''}
+      <div class="clip-content">${page.content}</div>
+      <button class="delete-btn" data-id="${page.id}">×</button>
+    `;
+>>>>>>> 07708dd (Initial commit)
       return;
     }
     

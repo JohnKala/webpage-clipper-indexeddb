@@ -4,7 +4,11 @@
  */
 
 const DB_NAME = 'WebpageClipperDB';
+<<<<<<< HEAD
 const DB_VERSION = 1;
+=======
+const DB_VERSION = 2;
+>>>>>>> 07708dd (Initial commit)
 const STORE_NAME = 'clippedPages';
 
 // Database connection
